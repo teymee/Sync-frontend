@@ -2,12 +2,11 @@ import axiosInstance from "@/utils/axiosInterceptor";
 import { setLocalStorage } from "@/utils/localStorageServices";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { APIs } from "../../../../api/index";
 
-const baseUrl = import.meta.env.VITE_BASEURL;
+// const baseUrl = import.meta.env.VITE_BASEURL;
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const secret = import.meta.env.VITE_SECRET;
-
-console.log(baseUrl, "base");
 
 //THUNKS
 export const getSpotifyToken = createAsyncThunk(
@@ -28,8 +27,31 @@ export const getSpotifyToken = createAsyncThunk(
   }
 );
 
-export const getUserTopTracks = createAsyncThunk("logic/getUserTopTracks", async () => {
-  const response = await axiosInstance.get("me/top/tracks");
+// 🚨 Top tracks
 
-  return response?.data;
-});
+export const getUserTopItems = createAsyncThunk(
+  "logic/getUserTopItems",
+  async (items) => {
+    const { type, time_range = "short_term" } = items ?? {};
+    if (!type) return alert("no type");
+
+    const response = await axiosInstance.get(APIs.topUserItems.base, {
+      params: items,
+    });
+    return response?.data;
+  }
+);
+
+// 🚨 Audio features
+
+export const getAudioFeatures = createAsyncThunk(
+  "logic/getAudioFeatures",
+  async (trackId) => {
+    const response = await axiosInstance.get(APIs.audioFeature.base, {
+      params: { trackId },
+    });
+
+    console.log(response.data, "audio features");
+    return response.data;
+  }
+);

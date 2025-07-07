@@ -11,3 +11,8 @@ export const generateRandomString = (length) => {
 
   return text;
 };
+
+export const lowerCase = (string) => {
+  if (!string) return "no string passed";
+  return string.toLowerCase();
+};

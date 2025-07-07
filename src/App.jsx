@@ -2,8 +2,8 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Auth/Login";
 import Callback from "./pages/Auth/Callback";
-import Main from "./pages/Main";
-
+import PersonaGeneration from "./pages/PersonaGeneration";
+import MusicCompart from "./pages/MusicCompart";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -12,14 +12,16 @@ function App() {
       element: <Login />,
     },
     {
-      index: true,
       path: "/callback",
       element: <Callback />,
     },
     {
-      index: true,
-      path: "/main",
-      element: <Main />,
+      path: "/persona-generator",
+      element: <PersonaGeneration />,
+    },
+    {
+      path: "/compartability",
+      element: <MusicCompart />,
     },
   ]);
 

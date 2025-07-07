@@ -17,7 +17,7 @@ export default function Callback() {
 
   useEffect(() => {
     if (!data) return;
-    dispatch(getSpotifyToken(data)).finally(() => navigate("/main"));
+    dispatch(getSpotifyToken(data)).finally(() => navigate("/compartability"));
   }, [data]);
 
   //   console.log(data, "jjj");

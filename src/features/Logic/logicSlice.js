@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUserTopTracks } from "./logicAPI";
+import { getUserTopItems } from "./logicAPI";
+import { lowerCase } from "@/utils/helperFn";
 
 let initialState = {
   userTopTracks: {
     isLoading: false,
-    data: null,
+    tracks: null,
+    artists: null,
   },
 };
 
@@ -14,15 +16,17 @@ const logicSlice = createSlice({
   extraReducers: (builder) => {
     // 🚨 User top tracks
     builder
-      .addCase(getUserTopTracks.pending, (state) => {
+      .addCase(getUserTopItems.pending, (state) => {
         state.userTopTracks.isLoading = true;
       })
-      .addCase(getUserTopTracks.fulfilled, (state, { payload }) => {
+      .addCase(getUserTopItems.fulfilled, (state, { payload, meta }) => {
+        const type = lowerCase(meta?.arg?.type);
+        state.userTopTracks[type] = payload;
         state.userTopTracks.isLoading = false;
-        state.userTopTracks.data = payload;
       });
   },
 });
 
 const logicStore = logicSlice.reducer;
+export const logicState = (state) => state?.logicStore;
 export default logicStore;
