@@ -4,6 +4,7 @@ import Login from "./pages/Auth/Login";
 import Callback from "./pages/Auth/Callback";
 import PersonaGeneration from "./pages/PersonaGeneration";
 import MusicCompart from "./pages/MusicCompart";
+import CheckCompart from "./pages/CheckCompart";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ function App() {
     {
       path: "/compartability",
       element: <MusicCompart />,
+    },
+    {
+      path: "/check-compart/:id",
+      element: <CheckCompart />,
     },
   ]);
 

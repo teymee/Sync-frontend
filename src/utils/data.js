@@ -9420,3 +9420,673 @@ export const topTracks = [
     uri: "spotify:track:2ezQq2qWhGO6J6q5JwC50d",
   },
 ];
+
+export const topArtists = [
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/1WgXqy2Dd70QQOU7Ay074N",
+    },
+    followers: {
+      href: null,
+      total: 4494469,
+    },
+    genres: ["norwegian pop", "art pop"],
+    href: "https://api.spotify.com/v1/artists/1WgXqy2Dd70QQOU7Ay074N",
+    id: "1WgXqy2Dd70QQOU7Ay074N",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebeefc6f13cec94fe613a6c1c8",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174eefc6f13cec94fe613a6c1c8",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178eefc6f13cec94fe613a6c1c8",
+        width: 160,
+      },
+    ],
+    name: "AURORA",
+    popularity: 76,
+    type: "artist",
+    uri: "spotify:artist:1WgXqy2Dd70QQOU7Ay074N",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/5nWYvcpaqKtp08cYxjOfFr",
+    },
+    followers: {
+      href: null,
+      total: 678395,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/5nWYvcpaqKtp08cYxjOfFr",
+    id: "5nWYvcpaqKtp08cYxjOfFr",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb3b8bdbbc4308ec6f7b3c6528",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab676161000051743b8bdbbc4308ec6f7b3c6528",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f1783b8bdbbc4308ec6f7b3c6528",
+        width: 160,
+      },
+    ],
+    name: "Gibran Alcocer",
+    popularity: 71,
+    type: "artist",
+    uri: "spotify:artist:5nWYvcpaqKtp08cYxjOfFr",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/7MigDh04CCntQbsBvugEmb",
+    },
+    followers: {
+      href: null,
+      total: 188940,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/7MigDh04CCntQbsBvugEmb",
+    id: "7MigDh04CCntQbsBvugEmb",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb3a7215b26592dab23e90d364",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab676161000051743a7215b26592dab23e90d364",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f1783a7215b26592dab23e90d364",
+        width: 160,
+      },
+    ],
+    name: "Marlon Craft",
+    popularity: 55,
+    type: "artist",
+    uri: "spotify:artist:7MigDh04CCntQbsBvugEmb",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/50JJSqHUf2RQ9xsHs0KMHg",
+    },
+    followers: {
+      href: null,
+      total: 1500997,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/50JJSqHUf2RQ9xsHs0KMHg",
+    id: "50JJSqHUf2RQ9xsHs0KMHg",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebbdc0709eec4b28557926fab6",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174bdc0709eec4b28557926fab6",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178bdc0709eec4b28557926fab6",
+        width: 160,
+      },
+    ],
+    name: "Jon Bellion",
+    popularity: 72,
+    type: "artist",
+    uri: "spotify:artist:50JJSqHUf2RQ9xsHs0KMHg",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/07Nw8aNFkDPVxSxI9Auf3E",
+    },
+    followers: {
+      href: null,
+      total: 7969,
+    },
+    genres: ["afro soul"],
+    href: "https://api.spotify.com/v1/artists/07Nw8aNFkDPVxSxI9Auf3E",
+    id: "07Nw8aNFkDPVxSxI9Auf3E",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb133962d37b88a7870f6886a4",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174133962d37b88a7870f6886a4",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178133962d37b88a7870f6886a4",
+        width: 160,
+      },
+    ],
+    name: "goD",
+    popularity: 34,
+    type: "artist",
+    uri: "spotify:artist:07Nw8aNFkDPVxSxI9Auf3E",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x",
+    },
+    followers: {
+      href: null,
+      total: 30297153,
+    },
+    genres: ["rap"],
+    href: "https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x",
+    id: "5K4W6rqBFWDnAN6FQUkS6x",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab676161000051746e835a500e791bf9c27a422a",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f1786e835a500e791bf9c27a422a",
+        width: 160,
+      },
+    ],
+    name: "Kanye West",
+    popularity: 93,
+    type: "artist",
+    uri: "spotify:artist:5K4W6rqBFWDnAN6FQUkS6x",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4",
+    },
+    followers: {
+      href: null,
+      total: 99688003,
+    },
+    genres: ["rap"],
+    href: "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+    id: "3TVXtAsR1Inumwj472S9r4",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab676161000051744293385d324db8558179afd9",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f1784293385d324db8558179afd9",
+        width: 160,
+      },
+    ],
+    name: "Drake",
+    popularity: 98,
+    type: "artist",
+    uri: "spotify:artist:3TVXtAsR1Inumwj472S9r4",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/2txHhyCwHjUEpJjWrEyqyX",
+    },
+    followers: {
+      href: null,
+      total: 4218721,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/2txHhyCwHjUEpJjWrEyqyX",
+    id: "2txHhyCwHjUEpJjWrEyqyX",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb89633578648b0b51f53d167f",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab6761610000517489633578648b0b51f53d167f",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f17889633578648b0b51f53d167f",
+        width: 160,
+      },
+    ],
+    name: "Tom Odell",
+    popularity: 80,
+    type: "artist",
+    uri: "spotify:artist:2txHhyCwHjUEpJjWrEyqyX",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/2PU4qFehXQF7WnlFsJpBiJ",
+    },
+    followers: {
+      href: null,
+      total: 205692,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/2PU4qFehXQF7WnlFsJpBiJ",
+    id: "2PU4qFehXQF7WnlFsJpBiJ",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb596908fc90d5639fc02a9dcd",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174596908fc90d5639fc02a9dcd",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178596908fc90d5639fc02a9dcd",
+        width: 160,
+      },
+    ],
+    name: "Raury",
+    popularity: 49,
+    type: "artist",
+    uri: "spotify:artist:2PU4qFehXQF7WnlFsJpBiJ",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg",
+    },
+    followers: {
+      href: null,
+      total: 42420449,
+    },
+    genres: ["hip hop", "west coast hip hop"],
+    href: "https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg",
+    id: "2YZyLoL8N0Wb9xBt1NhZWg",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb39ba6dcd4355c03de0b50918",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab6761610000517439ba6dcd4355c03de0b50918",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f17839ba6dcd4355c03de0b50918",
+        width: 160,
+      },
+    ],
+    name: "Kendrick Lamar",
+    popularity: 95,
+    type: "artist",
+    uri: "spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/6fOMl44jA4Sp5b9PpYCkzz",
+    },
+    followers: {
+      href: null,
+      total: 10945256,
+    },
+    genres: ["christian hip hop"],
+    href: "https://api.spotify.com/v1/artists/6fOMl44jA4Sp5b9PpYCkzz",
+    id: "6fOMl44jA4Sp5b9PpYCkzz",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb1cf142a710a2f3d9b7a62da1",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab676161000051741cf142a710a2f3d9b7a62da1",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f1781cf142a710a2f3d9b7a62da1",
+        width: 160,
+      },
+    ],
+    name: "NF",
+    popularity: 79,
+    type: "artist",
+    uri: "spotify:artist:6fOMl44jA4Sp5b9PpYCkzz",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/2wY79sveU1sp5g7SokKOiI",
+    },
+    followers: {
+      href: null,
+      total: 25903289,
+    },
+    genres: ["soft pop"],
+    href: "https://api.spotify.com/v1/artists/2wY79sveU1sp5g7SokKOiI",
+    id: "2wY79sveU1sp5g7SokKOiI",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebc4c97d96c08e4bb7c5f574aa",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174c4c97d96c08e4bb7c5f574aa",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178c4c97d96c08e4bb7c5f574aa",
+        width: 160,
+      },
+    ],
+    name: "Sam Smith",
+    popularity: 84,
+    type: "artist",
+    uri: "spotify:artist:2wY79sveU1sp5g7SokKOiI",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/7z2avKuuiMAT4XZJFv8Rvh",
+    },
+    followers: {
+      href: null,
+      total: 1320925,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/7z2avKuuiMAT4XZJFv8Rvh",
+    id: "7z2avKuuiMAT4XZJFv8Rvh",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebc2384c86f647f1d9ae9fb3ed",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174c2384c86f647f1d9ae9fb3ed",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178c2384c86f647f1d9ae9fb3ed",
+        width: 160,
+      },
+    ],
+    name: "Tom Walker",
+    popularity: 65,
+    type: "artist",
+    uri: "spotify:artist:7z2avKuuiMAT4XZJFv8Rvh",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/2FXC3k01G6Gw61bmprjgqS",
+    },
+    followers: {
+      href: null,
+      total: 8895727,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS",
+    id: "2FXC3k01G6Gw61bmprjgqS",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebad85a585103dfc2f3439119a",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174ad85a585103dfc2f3439119a",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178ad85a585103dfc2f3439119a",
+        width: 160,
+      },
+    ],
+    name: "Hozier",
+    popularity: 86,
+    type: "artist",
+    uri: "spotify:artist:2FXC3k01G6Gw61bmprjgqS",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/60oAQJsBmykZP3GwjbSL6S",
+    },
+    followers: {
+      href: null,
+      total: 336907,
+    },
+    genres: ["nova mpb"],
+    href: "https://api.spotify.com/v1/artists/60oAQJsBmykZP3GwjbSL6S",
+    id: "60oAQJsBmykZP3GwjbSL6S",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb02112aa34d10c514d7c13d0d",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab6761610000517402112aa34d10c514d7c13d0d",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f17802112aa34d10c514d7c13d0d",
+        width: 160,
+      },
+    ],
+    name: "Mariana Froes",
+    popularity: 70,
+    type: "artist",
+    uri: "spotify:artist:60oAQJsBmykZP3GwjbSL6S",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/66W9LaWS0DPdL7Sz8iYGYe",
+    },
+    followers: {
+      href: null,
+      total: 602422,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/66W9LaWS0DPdL7Sz8iYGYe",
+    id: "66W9LaWS0DPdL7Sz8iYGYe",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebf1b69cfc6644a19595de37be",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174f1b69cfc6644a19595de37be",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178f1b69cfc6644a19595de37be",
+        width: 160,
+      },
+    ],
+    name: "JP Saxe",
+    popularity: 66,
+    type: "artist",
+    uri: "spotify:artist:66W9LaWS0DPdL7Sz8iYGYe",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/73sIBHcqh3Z3NyqHKZ7FOL",
+    },
+    followers: {
+      href: null,
+      total: 14261126,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/73sIBHcqh3Z3NyqHKZ7FOL",
+    id: "73sIBHcqh3Z3NyqHKZ7FOL",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebc3dc5429b676b16d451e5f77",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174c3dc5429b676b16d451e5f77",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178c3dc5429b676b16d451e5f77",
+        width: 160,
+      },
+    ],
+    name: "Childish Gambino",
+    popularity: 82,
+    type: "artist",
+    uri: "spotify:artist:73sIBHcqh3Z3NyqHKZ7FOL",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/0upXUo04k4k8bGVSkmgrSc",
+    },
+    followers: {
+      href: null,
+      total: 338807,
+    },
+    genres: [
+      "jazz blues",
+      "afro soul",
+      "alté",
+      "afro r&b",
+      "pop soul",
+      "neo soul",
+    ],
+    href: "https://api.spotify.com/v1/artists/0upXUo04k4k8bGVSkmgrSc",
+    id: "0upXUo04k4k8bGVSkmgrSc",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5ebc0616b4b93439a0c72f6c864",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab67616100005174c0616b4b93439a0c72f6c864",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f178c0616b4b93439a0c72f6c864",
+        width: 160,
+      },
+    ],
+    name: "Aṣa",
+    popularity: 53,
+    type: "artist",
+    uri: "spotify:artist:0upXUo04k4k8bGVSkmgrSc",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/1AgxgADPuRIW1wyaA4OKcB",
+    },
+    followers: {
+      href: null,
+      total: 615824,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/1AgxgADPuRIW1wyaA4OKcB",
+    id: "1AgxgADPuRIW1wyaA4OKcB",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb18e3b26158842962e9400bcf",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab6761610000517418e3b26158842962e9400bcf",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f17818e3b26158842962e9400bcf",
+        width: 160,
+      },
+    ],
+    name: "Tom Rosenthal",
+    popularity: 66,
+    type: "artist",
+    uri: "spotify:artist:1AgxgADPuRIW1wyaA4OKcB",
+  },
+  {
+    external_urls: {
+      spotify: "https://open.spotify.com/artist/1VGSv0y30R6THoFPMiccx2",
+    },
+    followers: {
+      href: null,
+      total: 17902,
+    },
+    genres: [],
+    href: "https://api.spotify.com/v1/artists/1VGSv0y30R6THoFPMiccx2",
+    id: "1VGSv0y30R6THoFPMiccx2",
+    images: [
+      {
+        height: 640,
+        url: "https://i.scdn.co/image/ab6761610000e5eb1d278c957a461ddee2ffb060",
+        width: 640,
+      },
+      {
+        height: 320,
+        url: "https://i.scdn.co/image/ab676161000051741d278c957a461ddee2ffb060",
+        width: 320,
+      },
+      {
+        height: 160,
+        url: "https://i.scdn.co/image/ab6761610000f1781d278c957a461ddee2ffb060",
+        width: 160,
+      },
+    ],
+    name: "Renee Christine",
+    popularity: 41,
+    type: "artist",
+    uri: "spotify:artist:1VGSv0y30R6THoFPMiccx2",
+  },
+];
