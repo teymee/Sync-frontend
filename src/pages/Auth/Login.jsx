@@ -6,6 +6,7 @@ export default function Login() {
     "ugc-image-upload",
     "user-top-read",
     "user-read-playback-state",
+    "user-modify-playback-state",
     "user-read-currently-playing",
     "streaming",
     "playlist-read-private",

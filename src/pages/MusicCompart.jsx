@@ -1,6 +1,7 @@
 import { getUserTopItems } from "@/features/Logic/logicAPI";
 import { logicState } from "@/features/Logic/logicSlice";
 import { topArtists, topTracks } from "@/utils/data";
+import { encodeBase64, generateRandomArrValues } from "@/utils/helperFn";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -20,12 +21,11 @@ export default function MusicCompart() {
     dispatch(getUserTopItems(items));
   }, [dispatch]);
 
-  const topTracksUrl = topTracks?.slice(0, 5)?.map((track) => track?.uri);
-  const topArtistUrl = topArtists?.slice(0, 5)?.map((artist) => artist?.uri);
+  const topTracksUrl = generateRandomArrValues(topTracks, 10);
+  const topArtistUrl = generateRandomArrValues(topArtists, 10);
   const data = { artists: topArtistUrl, tracks: topTracksUrl };
-  const encodedTracks = btoa(JSON.stringify(data));
-  console.log(topArtistUrl, "yrl");
-  console.log(encodedTracks, "joined");
+
+  const encodedTracks = encodeBase64(data);
 
   const shareLink = `/check-compart/${encodedTracks}`;
 

@@ -5,6 +5,7 @@ import Callback from "./pages/Auth/Callback";
 import PersonaGeneration from "./pages/PersonaGeneration";
 import MusicCompart from "./pages/MusicCompart";
 import CheckCompart from "./pages/CheckCompart";
+import WebPlayback from "./pages/WebPlayback";
 function App() {
   const routes = createBrowserRouter([
     {
@@ -27,6 +28,11 @@ function App() {
     {
       path: "/check-compart/:id",
       element: <CheckCompart />,
+    },
+
+     {
+      path: "/web-playback",
+      element: <WebPlayback />,
     },
   ]);
 
