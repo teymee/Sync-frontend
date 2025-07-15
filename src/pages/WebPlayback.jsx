@@ -176,7 +176,7 @@ export default function WebPlayback() {
   return (
     <div className="container">
       <div className="main-wrapper">
-        <img src="https://i.scdn.co/image/ab6761610000e5ebeefc6f13cec94fe613a6c1c8" alt="" />
+        <img src="https://i.scdn.co/image/ab6761610000e5eb133962d37b88a7870f6886a4" alt="" />
         <>
           <div className="container">
             <div className="main-wrapper">
