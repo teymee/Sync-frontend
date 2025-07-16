@@ -6,12 +6,17 @@ import PersonaGeneration from "./pages/PersonaGeneration";
 import MusicCompart from "./pages/MusicCompart";
 import CheckCompart from "./pages/CheckCompart";
 import WebPlayback from "./pages/WebPlayback";
+import Home from "./pages/Home";
 function App() {
   const routes = createBrowserRouter([
     {
       index: true,
       path: "/",
       element: <Login />,
+    },
+    {
+      path:"/home",
+      element: <Home/>
     },
     {
       path: "/callback",

@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@theme {
+  /*  ✒️ FONTS  */
+  --font-DM: DM Sans, sans-serif;
+
+  /* 🚨COLORS  */
+
+  /* black  */
+  --color-black-1000: #28282B;
+  
+  /* gray  */
+  --color-gray-1000: #363638;
+  --color-gray-2000: #03020a;
+
+  /* blue  */
+  --color-blue-1000: #657efc;
+
+  /* green  */
+  --color-green-1000: #d2e991;
+
+  /* yellow */
+  --color-yellow-1000: #f5c05c;
+}
+
+.position-center {
+  @apply top-[50%] left-[50%] -translate-[50%];
+}
