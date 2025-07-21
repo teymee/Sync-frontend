@@ -2,8 +2,22 @@ import axiosInstance from "@/utils/axiosInterceptor";
 import { setLocalStorage } from "@/utils/localStorageServices";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { APIs } from "../../../../api/index";
+// import { APIs } from "../../../../api/index";
 
+
+ const APIs = {
+  // 🚨 User
+  topUserItems: {
+    base: "/me/top/items",
+    api: (items) => `/me/top/${items?.type}`,
+  },
+
+  // 🚨 Audio
+  audioFeature: {
+    base: "/audio-features",
+    api: (trackId) => `/audio-features/${trackId}`,
+  },
+};
 // const baseUrl = import.meta.env.VITE_BASEURL;
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const secret = import.meta.env.VITE_SECRET;
