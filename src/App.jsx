@@ -7,6 +7,11 @@ import MusicCompart from "./pages/MusicCompart";
 import CheckCompart from "./pages/CheckCompart";
 import WebPlayback from "./pages/WebPlayback";
 import Home from "./pages/Home";
+
+import gsap from "gsap";
+
+ import { SplitText, ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(SplitText, ScrollTrigger );
 function App() {
   const routes = createBrowserRouter([
     {
@@ -15,8 +20,8 @@ function App() {
       element: <Login />,
     },
     {
-      path:"/home",
-      element: <Home/>
+      path: "/home",
+      element: <Home />,
     },
     {
       path: "/callback",
@@ -35,7 +40,7 @@ function App() {
       element: <CheckCompart />,
     },
 
-     {
+    {
       path: "/web-playback",
       element: <WebPlayback />,
     },
