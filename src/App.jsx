@@ -16,12 +16,12 @@ function App() {
   const routes = createBrowserRouter([
     {
      
-      path: "/",
+      path: "/login",
       element: <Login />,
     },
     {
        index: true,
-      path: "/home",
+      path: "/",
       element: <Home />,
     },
     {
