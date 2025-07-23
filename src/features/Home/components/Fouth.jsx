@@ -10,23 +10,23 @@ const Fouth = () => {
   const images = [
     {
       id: 1,
-      src:"https://i.scdn.co/image/ab676161000051741cf142a710a2f3d9b7a62da1",
-  alt: "Nature landscape",
+      src: "https://i.scdn.co/image/ab676161000051741cf142a710a2f3d9b7a62da1",
+      alt: "Nature landscape",
     },
     {
       id: 2,
       src: "https://i.scdn.co/image/ab6761610000517439ba6dcd4355c03de0b50918",
-    alt: "City architecture",
+      alt: "City architecture",
     },
     {
       id: 3,
       src: "https://i.scdn.co/image/ab676161000051744293385d324db8558179afd9",
-     alt: "Ocean waves",
+      alt: "Ocean waves",
     },
     {
       id: 4,
       src: "https://i.scdn.co/image/ab67616100005174bdc0709eec4b28557926fab6",
-        alt: "Mountain peak",
+      alt: "Mountain peak",
     },
     {
       id: 5,
@@ -38,8 +38,6 @@ const Fouth = () => {
       src: "https://picsum.photos/400/300?random=6",
       alt: "Desert sunset",
     },
-
-    
   ];
 
   // Duplicate images for seamless loop
@@ -55,11 +53,11 @@ const Fouth = () => {
     // Create infinite animation
     gsap.to(carousel, {
       x: -singleSetWidth,
-      duration: 15,
+      duration: 10,
       repeat: -1,
       ease: "none",
-      onComplete: () => {
-        gsap.set([carousel], { x: 0 });
+      modifiers: {
+        x: gsap.utils.unitize((x) => parseFloat(x) % singleSetWidth),
       },
     });
 
@@ -68,11 +66,11 @@ const Fouth = () => {
       { x: -singleSetWidth },
       {
         x: 0,
-        duration: 18,
+        duration: 12,
         ease: "none",
         repeat: -1,
         onComplete: () => {
-          gsap.set([carousel], { x: 0 });
+          gsap.set([carousel2], { x: 0 });
         },
       }
     );
@@ -91,7 +89,7 @@ const Fouth = () => {
         scaleY: 0.99,
         yoyo: true,
         repeat: -1,
-        duration: 3,
+        duration: 2,
         delay: index * 0.2,
         ease: "power2.inOut",
       });
@@ -105,7 +103,7 @@ const Fouth = () => {
         scaleY: 0.99,
         yoyo: true,
         repeat: -1,
-        duration: 2.8,
+        duration: 2,
         delay: index * 0.15,
         ease: "power2.inOut",
       });
@@ -152,7 +150,7 @@ const Fouth = () => {
                 className={`even:mt-10 last:mt-40 image flex-shrink-0`}
                 key={index}
               >
-                <img src={src} alt="" className="h-24 w-24 rounded-xl" />
+                <img src={src} alt="" className="h-24 w-24 shadow-lg rounded-xl" />
               </div>
             );
           })}
@@ -178,7 +176,7 @@ const Fouth = () => {
 
             return (
               <div className={`even:mt-10 image flex-shrink-0`} key={index}>
-                <img src={src} alt="" className="h-24 w-24 rounded-xl" />
+                <img src={src} alt="" className="h-24 w-24 shadow-lg rounded-xl" />
               </div>
             );
           })}

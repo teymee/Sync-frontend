@@ -1,4 +1,5 @@
 import Banner from "@/features/Home/components/Banner";
+import Fifth from "@/features/Home/components/Fifth";
 import Fouth from "@/features/Home/components/Fouth";
 import Showcase from "@/features/Home/components/Showcase";
 import Third from "@/features/Home/components/Third";
@@ -11,6 +12,7 @@ export default function Home() {
       <Third />
 
       <Fouth />
+      <Fifth/>
     </section>
   );
 }
