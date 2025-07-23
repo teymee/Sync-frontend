@@ -15,11 +15,12 @@ gsap.registerPlugin(SplitText, ScrollTrigger );
 function App() {
   const routes = createBrowserRouter([
     {
-      index: true,
+     
       path: "/",
       element: <Login />,
     },
     {
+       index: true,
       path: "/home",
       element: <Home />,
     },
