@@ -7,20 +7,20 @@ import MusicCompart from "./pages/MusicCompart";
 import CheckCompart from "./pages/CheckCompart";
 import WebPlayback from "./pages/WebPlayback";
 import Home from "./pages/Home";
+import { Analytics } from '@vercel/analytics/react';
 
 import gsap from "gsap";
 
- import { SplitText, ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(SplitText, ScrollTrigger );
+import { SplitText, ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(SplitText, ScrollTrigger);
 function App() {
   const routes = createBrowserRouter([
     {
-     
       path: "/login",
       element: <Login />,
     },
     {
-       index: true,
+      index: true,
       path: "/",
       element: <Home />,
     },
@@ -49,6 +49,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <RouterProvider router={routes} />
     </>
   );
