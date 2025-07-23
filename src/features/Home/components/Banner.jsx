@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 
 export default function Banner() {
-  const containerRef = useRef();
+  const  wrapperRef = useRef();
 
   useGSAP(
     () => {
@@ -84,12 +84,12 @@ export default function Banner() {
           "+=1"
         );
     },
-    { scope: containerRef}
+    { scope:  wrapperRef}
   );
 
   return (
-    <section>
-      <section className=" w-full py-10 h-screen" ref={containerRef}>
+    <section className=" wrapper">
+      <section className=" w-full py-10 h-screen" ref={ wrapperRef}>
         <div className="banner-title">
           <h1 className="text-[80px] text-center leading-20">
             A place to display your <br /> masterpiece

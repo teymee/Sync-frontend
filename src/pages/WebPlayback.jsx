@@ -174,11 +174,11 @@ export default function WebPlayback() {
   }, [deviceId]);
 
   return (
-    <div className="container">
+    <div className=" wrapper">
       <div className="main-wrapper">
         <img src="https://i.scdn.co/image/ab6761610000e5eb133962d37b88a7870f6886a4" alt="" />
         <>
-          <div className="container">
+          <div className=" wrapper">
             <div className="main-wrapper">
               {/* <img
                 src={current_track.album.images[0].url}

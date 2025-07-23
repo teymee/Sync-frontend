@@ -1,5 +1,7 @@
-import Banner from "@/features/Home/components/Banner";
+import Banner from "@/features/Home/components/Banner"; 
+import Fouth from "@/features/Home/components/Fouth";
 import Showcase from "@/features/Home/components/Showcase";
+import Third from "@/features/Home/components/Third";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
@@ -28,23 +30,25 @@ export default function Home() {
     //   })
     //   .set(".body", {
     //     height: "auto",
-      
+
     //   })
-      tl.to(bannerRef.current, { opacity: 1 });
+    tl.to(bannerRef.current, { opacity: 1 });
   });
   return (
-    <section className="body w-[90%] mx-auto ">
+    <section className="body ">
       {/* <div
         ref={titleRef}
         className="text-[140px] h-screen overflow-y-hidden title font-bold flex flex-col items-center justify-center "
       >
         SYNC.
       </div> */}
-      <div ref={bannerRef} className="opacity-0  space-y-20">
+      <div ref={bannerRef} className="opacity-0 pb-40  space-y-20">
         <Banner />
-        <Showcase/>
+        <Showcase />
+        <Third />
+
+        <Fouth />
       </div>
-      
     </section>
   );
 }

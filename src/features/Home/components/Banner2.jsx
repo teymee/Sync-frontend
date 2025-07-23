@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Banner() {
-  const containerRef = useRef();
+  const  wrapperRef = useRef();
 
   useGSAP(() => {
   
@@ -93,10 +93,10 @@ export default function Banner() {
     // Create scroll-triggered animation with smooth stagger
     let triggerTL = gsap.timeline({
       scrollTrigger: {
-        trigger: containerRef.current,
+        trigger:  wrapperRef.current,
         start: "top +=20",
         end: "bottom bottom",
-        markers: true,
+         
         scrub: 1.2, // Increased scrub value for smoother animation
         onUpdate: (self) => {
           // Optional: Add custom logic during scroll
@@ -157,7 +157,7 @@ export default function Banner() {
         duration: 1,
         ease: "power2.inOut",
       }, 0.5)
-      // Move the entire showcase container
+      // Move the entire showcase  wrapper
       .to(".showcase", {
         y: 600,
         x: 100,
@@ -169,7 +169,7 @@ export default function Banner() {
 
     // Enhanced ScrollTrigger for better control
     ScrollTrigger.create({
-      trigger: containerRef.current,
+      trigger:  wrapperRef.current,
       start: "top center",
       end: "bottom center",
       onEnter: () => {
@@ -201,7 +201,7 @@ export default function Banner() {
 
   return (
     <section>
-      <section className="w-full py-10 h-[200vh]" ref={containerRef}>
+      <section className="w-full py-10 h-[200vh]" ref={ wrapperRef}>
         <div className="banner-title">
           <h1 className="text-[80px] text-center leading-20">
             A place to display your <br /> masterpiece
