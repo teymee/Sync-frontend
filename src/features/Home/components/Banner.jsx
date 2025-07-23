@@ -3,11 +3,19 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 
 export default function Banner() {
-  const  wrapperRef = useRef();
+  const wrapperRef = useRef();
+  const titleRef = useRef();
 
   useGSAP(
     () => {
       const tl = gsap.timeline();
+
+      tl
+        .to(".title", {
+          y: -10,
+          opacity: 0,
+          duration:1,
+        } , 1).to(".main", { opacity: 1 });
 
       // Initial states - combined similar elements
       gsap.set([".banner-title", ".banner-subtext"], { y: 200, opacity: 0 });
@@ -84,12 +92,21 @@ export default function Banner() {
           "+=1"
         );
     },
-    { scope:  wrapperRef}
+    { scope: wrapperRef }
   );
 
   return (
-    <section className=" wrapper">
-      <section className=" w-full py-10 h-screen" ref={ wrapperRef}>
+    <section ref={wrapperRef} className=" relative wrapper">
+      <section className="sync">
+        <div
+          ref={titleRef}
+          className="text-[140px] position-center absolute  title font-bold  "
+        >
+          SYNC.
+        </div>
+      </section>
+
+      <section className=" w-full py-10 h-screen main">
         <div className="banner-title">
           <h1 className="text-[80px] text-center leading-20">
             A place to display your <br /> masterpiece

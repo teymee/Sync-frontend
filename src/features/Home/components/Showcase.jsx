@@ -39,8 +39,8 @@ export default function Showcase() {
       gsap.to(descSplit.words, {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        stagger: 0.05,
+        duration: 0.3,
+
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".desc",
