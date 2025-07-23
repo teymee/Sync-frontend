@@ -46,7 +46,7 @@ export default function Fifth() {
       width: "100%",
       height: "600px",
       duration: 2,
-      ease:"back.inOut",
+      ease: "back.inOut",
       rotation: 4,
       scrollTrigger: {
         trigger: centerImg,
@@ -63,8 +63,8 @@ export default function Fifth() {
         width: "80%",
         height: "600px",
         duration: 2,
-       
-        ease:"back.inOut",
+
+        ease: "back.inOut",
         scrollTrigger: {
           trigger: centerImg,
           start: "top 40%",
@@ -75,8 +75,21 @@ export default function Fifth() {
       "+=0.5"
     );
 
-    
-    // gsap.to()
+    const tl = gsap.timeline({
+      repeat: -1,
+      yoyo: true,
+      defaults: { ease: "sine.inOut", duration: 2, y: "+=5" },
+    });
+
+    tl.to(".center-image img", {
+      rotation: 2,
+    })
+      .to(".center-image img", {
+        rotation: -2,
+      })
+      .to(".center-image img", {
+        rotation: 2,
+      });
   });
   return (
     <section className="relative h-screen wrapper  my-40 main-wrap">
