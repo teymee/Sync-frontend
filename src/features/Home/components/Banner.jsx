@@ -1,6 +1,8 @@
+import { spotifySignInLink } from "@/utils/helperFn";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   const wrapperRef = useRef();
@@ -10,12 +12,15 @@ export default function Banner() {
     () => {
       const tl = gsap.timeline();
 
-      tl
-        .to(".title", {
+      tl.to(
+        ".title",
+        {
           y: -10,
           opacity: 0,
-          duration:1,
-        } , 1).to(".main", { opacity: 1 });
+          duration: 1,
+        },
+        1
+      ).to(".main", { opacity: 1 });
 
       // Initial states - combined similar elements
       gsap.set([".banner-title", ".banner-subtext"], { y: 200, opacity: 0 });
@@ -189,13 +194,12 @@ export default function Banner() {
           <p className="font-semibold">
             Artist can display their masterpiece and buyers can discover
           </p>
-          <div className="flex gap-x-4 items-center justify-center">
-            <button className="text-sm bg-black-1000 px-6 cursor-pointer py-2 rounded-full text-white">
-              Join for $80.99
-            </button>
-            <button className="font-semibold cursor-pointer border px-6 py-1 border-black-1000 rounded-full ">
-              Read more
-            </button>
+          <div className="flex justify-center">
+            <Link to={spotifySignInLink()}>
+              <button className="text-lg bg-black-1000 px-6 cursor-pointer py-2 rounded-lg text-white">
+                Sign in with Spotify
+              </button>
+            </Link>
           </div>
         </section>
       </section>

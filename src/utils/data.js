@@ -1,3 +1,39 @@
+export const artist = {
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
+  },
+  "followers": {
+    "href": null,
+    "total": 100585221
+  },
+  "genres": [
+    "rap"
+  ],
+  "href": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4?locale=en-GB%2Cen-US%3Bq%3D0.9%2Cen%3Bq%3D0.8",
+  "id": "3TVXtAsR1Inumwj472S9r4",
+  "images": [
+    {
+      "url": "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9",
+      "height": 640,
+      "width": 640
+    },
+    {
+      "url": "https://i.scdn.co/image/ab676161000051744293385d324db8558179afd9",
+      "height": 320,
+      "width": 320
+    },
+    {
+      "url": "https://i.scdn.co/image/ab6761610000f1784293385d324db8558179afd9",
+      "height": 160,
+      "width": 160
+    }
+  ],
+  "name": "Drake",
+  "popularity": 99,
+  "type": "artist",
+  "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4"
+}
+
 export const personas = [
   {
     name: "Energetic Dreamer",

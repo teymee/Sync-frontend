@@ -7,11 +7,14 @@ import MusicCompart from "./pages/MusicCompart";
 import CheckCompart from "./pages/CheckCompart";
 import WebPlayback from "./pages/WebPlayback";
 import Home from "./pages/Home";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 import gsap from "gsap";
 
 import { SplitText, ScrollTrigger } from "gsap/all";
+import TopList from "./pages/TopList";
+import Artist from "./pages/Artist";
+import TopTracks from "./pages/TopTracks";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 function App() {
   const routes = createBrowserRouter([
@@ -44,6 +47,21 @@ function App() {
     {
       path: "/web-playback",
       element: <WebPlayback />,
+    },
+
+    {
+      path: "/top-tracks",
+      element: <TopTracks />,
+    },
+
+    {
+      path: "/top-list",
+      element: <TopList />,
+    },
+
+    {
+      path: "/artist-details",
+      element: <Artist />,
     },
   ]);
 

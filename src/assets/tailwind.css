@@ -5,10 +5,12 @@
   --font-DM: DM Sans, sans-serif;
 
   /* 🚨COLORS  */
+  --color-primary: #edeade;
+  --color-sec: #242424;
 
   /* black  */
-  --color-black-1000: #28282B;
-  
+  --color-black-1000: #28282b;
+
   /* gray  */
   --color-gray-1000: #363638;
   --color-gray-2000: #03020a;
@@ -18,15 +20,32 @@
 
   /* green  */
   --color-green-1000: #d2e991;
+  --color-green-1100: #5f6d61;
+  --color-green-2000: #475249;
+  --color-green-2500: #889589;
+  --color-green-3000: #d8ffdf;
+  --color-green-3500: #B8FEC5;
+
+  /* cream  */
+  --color-cream-100: #edeade;
 
   /* yellow */
   --color-yellow-1000: #f5c05c;
+
+  /* primary  */
+  --color-primary-400: #8bcb97;
+
+  /* neutral  */
+  --color-neutral-900: #4e4b40;
+
+  /* gray  */
+  --color-gray-1000: #c0bdb0;
 }
 
 .position-center {
   @apply top-[50%] left-[50%] -translate-[50%];
 }
 
-.wrapper{
-  @apply w-[90%] mx-auto 
+.wrapper {
+  @apply w-[90%] mx-auto;
 }
