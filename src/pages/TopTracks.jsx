@@ -22,8 +22,6 @@ export default function TopTracks() {
     }
   };
 
-  console.log(currentIndex);
-
   return (
     <section className="relative w-11/12 h-screen  flex items-center mx-auto ">
       <section className="flex items-center  w-full ">
@@ -59,16 +57,19 @@ export default function TopTracks() {
               />
             </div>
 
-            <div className="space-y-2">
-              <div className="flex text-4xl font-bold w-fit">
-                <h3>{activeTrack?.popularity}</h3>{" "}
-                <p className="text-sm">% popularity</p>
-              </div>
-              <div className="w-full">
+            <div className="space-y-2 ">
+              <section className="flex justify-between gap-x-6">
+                <div className="flex text-4xl font-bold w-fit">
+                  <h3>{activeTrack?.popularity}</h3>{" "}
+                  <p className="text-sm">% popularity</p>
+                </div>
+
                 <p className="flex justify-end mb-[-5px] font-medium">
                   <span className="font-semibold">Release date</span>:{" "}
                   {moment(activeTrack?.release_date).format("Do MMM, YYYY")}
                 </p>
+              </section>
+              <div className="w-full">
                 <h1 className="text-8xl font-bold">
                   {" "}
                   {trimText(activeTrack?.name)}
