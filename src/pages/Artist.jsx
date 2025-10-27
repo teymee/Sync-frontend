@@ -7,7 +7,7 @@ import add from "@/assets/svg/add-circle.svg";
 import { topTracks } from "@/utils/data";
 export default function Artist() {
   return (
-    <section className="h-screen  w-[90%] mx-auto flex gap-x-4 py-10">
+    <section className=" w-[90%] mx-auto flex gap-x-4">
       <section className="w-[10%]  flex flex-col justify-between relative">
         <section>CHART</section>
 

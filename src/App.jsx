@@ -16,6 +16,7 @@ import TopList from "./pages/TopList";
 import Artist from "./pages/Artist";
 import TopTracks from "./pages/TopTracks";
 import MasterLayout from "./components/Masterlayout";
+import TopArtists from "./pages/TopArtists";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 function App() {
   const routes = createBrowserRouter([
@@ -31,6 +32,7 @@ function App() {
           index: true,
           element: <Home />,
         },
+
         {
           path: "/callback",
           element: <Callback />,
@@ -56,6 +58,11 @@ function App() {
         {
           path: "/top-tracks",
           element: <TopTracks />,
+        },
+
+        {
+          path: "/top-artists",
+          element: <TopArtists />,
         },
 
         {

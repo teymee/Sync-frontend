@@ -50,6 +50,8 @@ body {
   scrollbar-width: none;
 }
 
+/*  */
+
 .spin-track {
   animation: rotation infinite 6s linear;
 }
@@ -62,7 +64,17 @@ body {
   }
 }
 
-/*  */
+.artist-list {
+  --fadedPercent: 2%;
+  /* pointer-events: none; */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black var(--fadedPercent),
+    black calc(100% - var(--fadedPercent)),
+    transparent
+  );
+}
 
 @media (prefers-color-scheme: light) {
   :root {
