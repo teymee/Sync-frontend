@@ -105,7 +105,7 @@ export default function Banner() {
       <section className="sync">
         <div
           ref={titleRef}
-          className="text-[140px] position-center absolute  title font-bold  "
+          className="text-[140px] position-center absolute title font-bold  "
         >
           SYNC.
         </div>

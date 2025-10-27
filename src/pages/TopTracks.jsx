@@ -87,7 +87,7 @@ export default function TopTracks() {
               <button
                 disabled={currentIndex === 0}
                 onClick={() => handleToggle("prev")}
-                className="w-9 cursor-pointer  h-9 text-center rounded-full bg-[#CCC7BA]"
+                className="w-9 cursor-pointer  h-9 text-center rounded-full bg-[#CCC7BA] hover:bg-gray-900 hover:text-white"
               >
                 {" "}
                 {"<"}{" "}
@@ -96,7 +96,7 @@ export default function TopTracks() {
               <button
                 disabled={currentIndex === topTracks.length - 1}
                 onClick={() => handleToggle("next")}
-                className=" cursor-pointer w-9 h-9 text-center rounded-full bg-gray-900 text-white"
+                className=" cursor-pointer w-9 h-9 text-center rounded-full bg-[#CCC7BA] hover:bg-gray-900 hover:text-white"
               >
                 {" "}
                 {">"}{" "}
