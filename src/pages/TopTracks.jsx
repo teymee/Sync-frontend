@@ -23,7 +23,7 @@ export default function TopTracks() {
   };
 
   return (
-    <section className="relative w-11/12 h-screen  flex items-center mx-auto ">
+    <section className="relative w-11/12   flex items-center mx-auto ">
       <section className="flex items-center  w-full ">
         {/* 🚨 ranking  */}
         <section className=" w-[10%] flex justify-start self-start  h-[400px] overflow-y-scroll hide-scrollbar ">
@@ -106,7 +106,7 @@ export default function TopTracks() {
         </section>
         {/*  */}
 
-        <section className="absolute right-0 bottom-10">
+        <section className="absolute right-0 bottom-0">
           <section className="max-w-[600px] px-4 overflow-x-scroll hide-scrollbar">
             <section className="w-max flex gap-x-10 ">
               {topTracks.map((track) => {
