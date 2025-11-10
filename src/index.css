@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Orbitron:wght@400..900&family=Permanent+Marker&family=Sirin+Stencil&family=Stack+Sans+Notch:wght@200..700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400..900&family=Permanent+Marker&family=Sirin+Stencil&family=Stack+Sans+Notch:wght@200..700&display=swap');
 :root {
   font-family: DM Sans, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -51,7 +53,9 @@ body {
 }
 
 /*  */
-
+.topGap {
+  padding-top: 20px;
+}
 .spin-track {
   animation: rotation infinite 6s linear;
 }

@@ -3,6 +3,7 @@
 @theme {
   /*  ✒️ FONTS  */
   --font-DM: DM Sans, sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
 
   /* 🚨COLORS  */
   --color-primary: #edeade;
@@ -24,7 +25,7 @@
   --color-green-2000: #475249;
   --color-green-2500: #889589;
   --color-green-3000: #d8ffdf;
-  --color-green-3500: #B8FEC5;
+  --color-green-3500: #b8fec5;
 
   /* cream  */
   --color-cream-100: #edeade;
@@ -42,6 +43,9 @@
   --color-gray-1000: #c0bdb0;
 }
 
+.col-center {
+  @apply flex flex-col justify-center items-center;
+}
 .position-center {
   @apply top-[50%] left-[50%] -translate-[50%];
 }

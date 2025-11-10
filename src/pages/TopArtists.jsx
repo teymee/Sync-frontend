@@ -9,23 +9,27 @@ export default function TopArtists() {
         <section className=" w-max flex flex-col items-center justify-center">
           <section className="w-max flex gap-x-10 items-center justify-center px-10 py-20">
             {topArtists.map((artist, index) => {
-              let image = artist?.images?.[0]?.url;
+              const {id, name, images, followers} = artist ?? {}
+              let image = images?.[0]?.url;
+              // let follows = followers?.total
               return (
                 <Link to={`/artist-details`}>
                   <div
-                    key={artist?.id}
-                    className="space-y-1 hover:scale-[1.3] duration-500"
+                    key={id}
+                    className="space-y-1 text-sm hover:scale-[1.3] duration-500"
                   >
-                    <div className=" text-sm font-semibold">
+                    <div className=" font-semibold">
                       <p>{++index}</p>
 
-                      <p>{artist?.name}</p>
+                      <p>{name}</p>
+                        {/* <p className="font-semibold">{follows?.toLocaleString()} followers</p> */}
                     </div>
                     <img
                       src={image}
                       alt=""
                       className="h-[250px] w-[200px] object-cover rounded-sm cursor-pointer shadow-xl "
                     />
+                  
                   </div>
                 </Link>
               );
