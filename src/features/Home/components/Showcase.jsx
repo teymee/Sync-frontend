@@ -11,10 +11,6 @@ export default function Showcase() {
     () => {
       let headerSplit = SplitText.create(".header", { type: "words" });
       let descSplit = SplitText.create(".desc", { type: "words" });
-
-       console.log("Header words:", headerSplit.words.length);
-    console.log("Desc words:", descSplit.words.length);
-      
       const allWords = [...headerSplit.words, ...descSplit.words];
       gsap.set(".artist-show", {
         opacity: 0,
@@ -63,11 +59,11 @@ export default function Showcase() {
       });
 
       const allArtists = gsap.utils.toArray(".artist-show");
-      console.log(allArtists, 'show')
       showcaseTL.to(".artist-show", {
         y: 0,
         opacity: 1,
         duration: 1,
+
         ease: "back.out",
       });
 

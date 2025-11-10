@@ -16,14 +16,14 @@ export default function Navbar() {
       name: "Top list",
       link: "/top-list",
     },
-    {
-      name: "Persona generator",
-      link: "/persona-generator",
-    },
-    {
-      name: "Music compatability",
-      link: "/compartability",
-    },
+    // {
+    //   name: "Persona generator",
+    //   link: "/persona-generator",
+    // },
+    // {
+    //   name: "Music compatability",
+    //   link: "/compartability",
+    // },
   ];
   return (
     <nav className="bg-primary sticky top-0  py-5 shadow z-30">
