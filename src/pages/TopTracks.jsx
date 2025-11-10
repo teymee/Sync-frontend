@@ -95,73 +95,73 @@ export default function TopTracks() {
       const tl = gsap.timeline();
 
       // 🚨 Title card animation
-      // gsap.set(".track-body", {
-      //   display: "none",
-      // });
-      // tl.from(
-      //   ".top-text",
-      //   {
-      //     x: "-100%",
-      //     duration: 1.3,
-      //   },
-      //   "="
-      // );
+      gsap.set(".track-body", {
+        display: "none",
+      });
+      tl.from(
+        ".top-text",
+        {
+          x: "-100%",
+          duration: 1.3,
+        },
+        "="
+      );
 
-      // tl.from(
-      //   ".tracks",
-      //   {
-      //     x: "100%",
-      //     duration: 1.6,
-      //   },
-      //   "="
-      // );
+      tl.from(
+        ".tracks",
+        {
+          x: "100%",
+          duration: 1.6,
+        },
+        "="
+      );
 
-      // tl.to(".title-card", {
-      //   letterSpacing: "20px",
-      //   opacity: 0.2,
-      //   duration: 0.3,
-      //   delay: 0.5,
-      // });
+      tl.to(".title-card", {
+        letterSpacing: "20px",
+        opacity: 0.2,
+        duration: 0.3,
+        delay: 0.5,
+      });
 
-      // tl.set(".title-card", {
-      //   fontFamily: "Permanent Marker, cursive",
-      // });
+      tl.set(".title-card", {
+        fontFamily: "Permanent Marker, cursive",
+      });
 
-      // tl.to(".title-card", {
-      //   letterSpacing: "0px",
-      //   opacity: 1,
-      //   duration: 0.4,
-      // });
+      tl.to(".title-card", {
+        letterSpacing: "0px",
+        opacity: 1,
+        duration: 0.4,
+      });
 
-      // tl.to(
-      //   ".top-text",
-      //   {
-      //     y: "-100%",
-      //     duration: 1.3,
-      //     opacity: 0,
-      //   },
-      //   "+=1"
-      // );
+      tl.to(
+        ".top-text",
+        {
+          y: "-100%",
+          duration: 1.3,
+          opacity: 0,
+        },
+        "+=1"
+      );
 
-      // tl.to(
-      //   ".tracks",
-      //   {
-      //     y: "100%",
-      //     duration: 1.6,
-      //     opacity: 0,
-      //   },
-      //   "<"
-      // );
-      // tl.to(
-      //   ".title-card",
-      //   {
-      //     display: "none",
-      //   },
-      //   ">"
-      // );
-      // tl.to(".track-body", {
-      //   display: "flex",
-      // });
+      tl.to(
+        ".tracks",
+        {
+          y: "100%",
+          duration: 1.6,
+          opacity: 0,
+        },
+        "<"
+      );
+      tl.to(
+        ".title-card",
+        {
+          display: "none",
+        },
+        ">"
+      );
+      tl.to(".track-body", {
+        display: "flex",
+      });
 
       // 🚨 Image reveal
       tl.fromTo(
@@ -186,10 +186,10 @@ export default function TopTracks() {
   return (
     <section ref={wrapperRef} className="h-full w-full top-track">
       {/* 🚨 Title header  */}
-      {/* <section className="title-card w-full h-full overflow-x-hidden col-center text-9xl font-semibold  uppercase font-orbitron">
+      <section className="title-card w-full h-full overflow-x-hidden col-center text-9xl font-semibold  uppercase font-orbitron">
         <h1 className="ml-[-190px] top-text">Top</h1>
         <h2 className="ml-40 tracks">Tracks</h2>
-      </section> */}
+      </section>
       {/*  */}
       <section className="relative w-11/12 flex items-center mx-auto track-body h-full  ">
         <section className="flex items-center  w-full ">
