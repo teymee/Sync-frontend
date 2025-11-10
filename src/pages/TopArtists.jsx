@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function TopArtists() {
   return (
-    <section className="w-11/12 mx-auto relative h-[70vh] flex items-center flex-col">
+    <section className="w-11/12 mx-auto relative h-full flex items-center flex-col">
       <section className="w-full my-auto overflow-x-scroll hide-scrollbar artist-list">
         <section className=" w-max flex flex-col items-center justify-center">
           <section className="w-max flex gap-x-10 items-center justify-center px-10 py-20">
