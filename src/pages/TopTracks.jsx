@@ -8,6 +8,8 @@ import React, { useEffect, useRef, useState } from "react";
 export default function TopTracks() {
   const [activeTrack, setActiveTrack] = useState(topTracks[0]);
 
+  // const clickSound = useRef(new Audio("/sounds/click.mp3"));
+
   const wrapperRef = useRef();
   const listRef = useRef();
   const itemsRef = useRef([]);
@@ -85,6 +87,13 @@ export default function TopTracks() {
         block: "center",
         inline: "center",
       });
+
+      // if (clickSound) {
+      //   clickSound.current.currentTime = 0;
+      //   clickSound.current
+      //     .play()
+      //     .catch((err) => console.log(err, "sound play errir"));
+      // }
     }
     return () => {};
   }, [currentIndex]);
@@ -287,7 +296,7 @@ export default function TopTracks() {
           {/*  */}
 
           <section className="absolute right-0 bottom-10 artist-list">
-            <section className="max-w-[600px] px-4 py-4 overflow-x-scroll hide-scrollbar">
+            <section className="max-w-[600px] px-8 py-4 overflow-x-scroll hide-scrollbar">
               <section className="w-max flex gap-x-4 ">
                 {topTracks.map((track, index) => {
                   let image = track?.album?.images[0]?.url;
