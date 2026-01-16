@@ -69,7 +69,7 @@ export default function TopArtists() {
         <section className=" w-max flex flex-col items-center justify-center">
           <section className="w-max flex gap-x-10 items-center justify-center px-10 py-20">
             {topArtists.map((artist, index) => {
-              const { id, name, images, followers } = artist ?? {};
+              const { id, name, images } = artist ?? {};
               let image = images?.[0]?.url;
               // let follows = followers?.total
               return (

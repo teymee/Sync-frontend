@@ -51,5 +51,6 @@
 }
 
 .wrapper {
-  @apply w-[90%] mx-auto;
+  @apply w-[90%] mx-auto
+   /* max-w-[1900px]; */
 }
