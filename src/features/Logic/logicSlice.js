@@ -1,12 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUserTopItems } from "./logicAPI";
+import { getArtistAlbums, getArtistDetails, getUserTopItems } from "./logicAPI";
 import { lowerCase } from "@/utils/helperFn";
 
 let initialState = {
   userTopTracks: {
-    isLoading: false,
+    isLoading: true,
     tracks: null,
     artists: null,
+  },
+
+  artistDetails: {
+    isLoading: true,
+    details: null,
+  },
+
+  artistAlbums: {
+    isLoading: true,
+    albums: null,
   },
 };
 
@@ -23,6 +33,26 @@ const logicSlice = createSlice({
         const type = lowerCase(meta?.arg?.type);
         state.userTopTracks[type] = payload;
         state.userTopTracks.isLoading = false;
+      });
+
+    // 🚨 Artist details
+    builder
+      .addCase(getArtistDetails.pending, (state) => {
+        state.artistDetails.isLoading = true;
+      })
+      .addCase(getArtistDetails.fulfilled, (state, { payload }) => {
+        state.artistDetails.details = payload;
+        state.artistDetails.isLoading = false;
+      });
+
+    // 🚨 Artist albums
+    builder
+      .addCase(getArtistAlbums.pending, (state) => {
+        state.artistAlbums.isLoading = true;
+      })
+      .addCase(getArtistAlbums.fulfilled, (state, { payload }) => {
+        state.artistAlbums.albums = payload;
+        state.artistAlbums.isLoading = false;
       });
   },
 });

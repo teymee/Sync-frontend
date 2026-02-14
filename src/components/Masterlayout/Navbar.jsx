@@ -12,10 +12,10 @@ export default function Navbar() {
       name: "Top artists",
       link: "/top-artists",
     },
-    {
-      name: "Top list",
-      link: "/top-list",
-    },
+    // {
+    //   name: "Top list",
+    //   link: "/top-list",
+    // },
     // {
     //   name: "Persona generator",
     //   link: "/persona-generator",

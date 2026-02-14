@@ -4,12 +4,23 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 // import { APIs } from "../../../../api/index";
 
-
- const APIs = {
+const APIs = {
   // 🚨 User
   topUserItems: {
     base: "/me/top/items",
     api: (items) => `/me/top/${items?.type}`,
+  },
+
+  // 🚨 artist details
+  artistDetails: {
+    base: "/artist-details",
+    api: (id) => `/artists/${id}`,
+  },
+
+  // 🚨 artist albums
+  artistAlbums: {
+    base: "/artist-albums",
+    api: (id) => `/artists/${id}/albums`,
   },
 
   // 🚨 Audio
@@ -34,26 +45,49 @@ export const getSpotifyToken = createAsyncThunk(
           "content-type": "application/x-www-form-urlencoded",
           Authorization: "Basic " + btoa(clientId + ":" + secret),
         },
-      }
+      },
     );
     setLocalStorage("token", response?.data);
     return response?.data?.data ?? response?.data;
-  }
+  },
 );
 
-// 🚨 Top tracks
+// 🚨 Top items
 
 export const getUserTopItems = createAsyncThunk(
   "logic/getUserTopItems",
   async (items) => {
-    const { type, time_range = "short_term" } = items ?? {};
+    const { type } = items ?? {};
     if (!type) return alert("no type");
-
     const response = await axiosInstance.get(APIs.topUserItems.base, {
       params: items,
     });
     return response?.data;
-  }
+  },
+);
+
+// 🚨 Artist details
+export const getArtistDetails = createAsyncThunk(
+  "logic/getArtistDetails",
+  async (id) => {
+    const response = await axiosInstance.get(APIs.artistDetails.base, {
+      params: { id },
+    });
+
+    return response?.data;
+  },
+);
+
+// 🚨 Artist albums
+export const getArtistAlbums = createAsyncThunk(
+  "logic/getArtistAlbums",
+  async (id) => {
+    const response = await axiosInstance.get(APIs.artistAlbums.base, {
+      params: { id },
+    });
+
+    return response?.data;
+  },
 );
 
 // 🚨 Audio features
@@ -67,5 +101,5 @@ export const getAudioFeatures = createAsyncThunk(
 
     console.log(response.data, "audio features");
     return response.data;
-  }
+  },
 );

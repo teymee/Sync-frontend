@@ -17,7 +17,7 @@ export default function Callback() {
 
   useEffect(() => {
     if (!data) return;
-    dispatch(getSpotifyToken(data)).finally(() => navigate("/compartability"));
+    dispatch(getSpotifyToken(data)).finally(() => navigate("/top-artists"));
   }, [data]);
 
   //   console.log(data, "jjj");

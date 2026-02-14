@@ -5,21 +5,43 @@ export const generateRandomString = (length) => {
 
   for (let i = 0; i < length; i++) {
     text += possibleText.charAt(
-      Math.floor(Math.random() * possibleText.length)
+      Math.floor(Math.random() * possibleText.length),
     );
   }
 
   return text;
 };
 
-export const trimText = (str, num = 7) => {
-  if(!str) return "N/A"
-  if(str.length >  num){
-  return `${str.slice(0, num)}...`;
-  }else{
-    return str
+export function getHumanReadableDuration(createdAt, eventDate) {
+  const created = new Date(createdAt);
+  const event = new Date(eventDate);
+
+  const diffMs = event - created;
+
+  // Handle negative duration (event in the past)
+  if (diffMs < 0) {
+    return "Event is in the past";
   }
 
+  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+
+  const parts = [];
+  if (days > 0) parts.push(`${days} day${days > 1 ? "s" : ""}`);
+  if (hours > 0) parts.push(`${hours} hour${hours > 1 ? "s" : ""}`);
+  if (minutes > 0) parts.push(`${minutes} minute${minutes > 1 ? "s" : ""}`);
+
+  return parts.join(", ") || "Less than a minute";
+}
+
+export const trimText = (str, num = 7) => {
+  if (!str) return "N/A";
+  if (str.length > num) {
+    return `${str.slice(0, num)}...`;
+  } else {
+    return str;
+  }
 };
 
 export const spotifySignInLink = () => {

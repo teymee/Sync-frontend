@@ -17,6 +17,8 @@ import Artist from "./pages/Artist";
 import TopTracks from "./pages/TopTracks";
 import MasterLayout from "./components/Masterlayout";
 import TopArtists from "./pages/TopArtists";
+import Calendar from "./pages/Calendar";
+import Memory from "./features/Memories/Memory";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 function App() {
   const routes = createBrowserRouter([
@@ -56,6 +58,16 @@ function App() {
         },
 
         {
+          path: "/memory/:id",
+          element: <Memory />,
+        },
+
+        //    {
+        //   path: "/top-tracks",
+        //   element: <Calendar />,
+        // },
+
+        {
           path: "/top-tracks",
           element: <TopTracks />,
         },
@@ -71,7 +83,7 @@ function App() {
         },
 
         {
-          path: "/artist-details",
+          path: "/artist-details/:id",
           element: <Artist />,
         },
       ],
