@@ -244,9 +244,9 @@ export default function TopTracks() {
   return (
     <section ref={wrapperRef} className="h-full w-full top-track">
       {/* 🚨Google Calendar implementation  */}
-      {/* <section>
-        <button onClick={handleModal}>Open modal</button>
-      </section> */}
+      <section>
+        <button onClick={handleModal}>Let's create a memory</button>
+      </section>
       {/*  */}
 
       {/* 🚨 Title header  */}
@@ -268,6 +268,7 @@ export default function TopTracks() {
                 topTracks.map((track, index) => {
                   return (
                     <li
+                    key={track.id}
                       ref={(e) => (itemsRef.current[index] = e)}
                       onClick={() => changeActiveTrack(track, index)}
                       className={`cursor-pointer ${
@@ -375,7 +376,7 @@ export default function TopTracks() {
                       <div
                         ref={imgListRef}
                         onClick={() => changeActiveTrack(track, index)}
-                        key={track.name}
+                        key={track.id}
                         className="flex-shrink-0 cursor-pointer"
                       >
                         <img

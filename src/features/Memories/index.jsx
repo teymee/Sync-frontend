@@ -1,6 +1,6 @@
 import { supabase } from "@/utils/config";
 import { getHumanReadableDuration } from "@/utils/helperFn";
-import { Modal } from "antd";
+import { Alert, Modal } from "antd";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -21,9 +21,9 @@ export default function Memories({ isModalOpen, handleModal }) {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [imgPreview, setImgPreview] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [memoryDetails, setMemoryDetails] = useState(null);
 
   const tokenClient = useRef(null);
+  const memoryDetails = useRef();
   const [events, setEvents] = useState([]);
 
   const [accessToken, setAccessToken] = useState(
@@ -43,6 +43,8 @@ export default function Memories({ isModalOpen, handleModal }) {
 
           localStorage.setItem("calendar", JSON.stringify(tokenResponse));
           setAccessToken(tokenResponse);
+          console.log("About to ennter store calendar");
+          storeInCalendar();
         },
       });
 
@@ -67,59 +69,72 @@ export default function Memories({ isModalOpen, handleModal }) {
     setEvents(data.items || []);
   };
 
+  const storeInCalendar = () => {
+    console.log(memoryDetails, "entered calendar ");
+    const { name, email, title, duration, link, date } =
+      memoryDetails.current ?? {};
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const startTime = new Date(date);
+    const endTime = new Date(startTime.getTime() + 60 * 60 * 1000); // +1 hour
+    console.log("goooooooooooooogl");
+    const event = {
+      summary: title,
+      description: `🎉 Hey ${name || email}, Sync has something to remind you in ${duration}. I have a surprise for you click here ${link}`,
+      start: {
+        dateTime: `${date}:00`,
+        timeZone: timezone,
+      },
+      end: {
+        dateTime: endTime.toISOString().slice(0, 19),
+        timeZone: timezone,
+      },
+      reminders: {
+        useDefault: false,
+        overrides: [{ method: "popup", minutes: 0 }],
+      },
+      colorId: "10", // Nice color (optional)
+    };
+    createEvent(event);
+    console.log(event);
+  };
   const triggerGoogleOAUTH = () => {
     const hasTokenExpired = accessToken
       ? Date.now() >= parseInt(accessToken.expires_in) - 5 * 60 * 1000
       : false;
 
     console.log(hasTokenExpired, accessToken);
-    if (hasTokenExpired) {
-      googleOAUTHSignIn();
-    }
     if (!accessToken) {
       googleOAUTHSignIn();
-      // tokenClient.current.requestAccessToken();
+    }
+    if (hasTokenExpired) {
+      googleOAUTHSignIn();
     } else {
-      const { name, email, title, duration, link } = memoryDetails ?? {};
-      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      const startTime = new Date(memoryDetails.date);
-      const endTime = new Date(startTime.getTime() + 60 * 60 * 1000); // +1 hour
-      console.log("goooooooooooooogl");
-      const event = {
-        summary: title,
-        description: `🎉 Hey ${name || email}, Sync has something to remind you in ${duration}. I have a surprise for you click here ${link}`,
-        start: {
-          dateTime: `${memoryDetails.date}:00`,
-          timeZone: timezone,
-        },
-        end: {
-          dateTime: endTime.toISOString().slice(0, 19),
-          timeZone: timezone,
-        },
-        reminders: {
-          useDefault: false,
-          overrides: [{ method: "popup", minutes: 0 }],
-        },
-        colorId: "10", // Nice color (optional)
-      };
-      createEvent(event);
-      console.log(event);
+      storeInCalendar();
     }
   };
 
   const createEvent = async (data) => {
+    console.log("entered create event");
+    if (!accessToken) return;
     const token = JSON.parse(localStorage.getItem("calendar"));
-    const response = await axios.post(
-      "https://www.googleapis.com/calendar/v3/calendars/primary/events",
-      JSON.stringify(data),
-      {
-        headers: {
-          Authorization: `Bearer ${token?.access_token}`,
-          "Content-Type": "application/json",
+    try {
+      const response = await axios.post(
+        "https://www.googleapis.com/calendar/v3/calendars/primary/events",
+        JSON.stringify(data),
+        {
+          headers: {
+            Authorization: `Bearer ${token?.access_token}`,
+            "Content-Type": "application/json",
+          },
         },
-      },
-    );
-    console.log(response, "bbbb");
+      );
+
+      console.log(response, "bbbb");
+
+      handleModal();
+    } catch (e) {
+      console.log(`Create event error: ${e}`);
+    }
   };
 
   ///////////////////
@@ -147,6 +162,7 @@ export default function Memories({ isModalOpen, handleModal }) {
 
   const saveMemory = async (e) => {
     e.preventDefault();
+
     const name = e.target.name.value;
     const email = e.target.email.value;
     const title = e.target.title.value;
@@ -154,13 +170,13 @@ export default function Memories({ isModalOpen, handleModal }) {
     const future = e.target.future.value;
     const date = e.target.date.value;
     try {
+      setIsLoading(true);
       // 🚨 Upload to cloudinary
       const cloudinaryUpload = await Promise.all(
         selectedFiles.flat().map((file) => uploadImageToCloudinary(file)),
       );
-      setIsLoading(true);
+
       const imgUrls = cloudinaryUpload.map((url) => url.secure_url);
-      console.log(imgUrls, "image urls");
 
       const data = {
         name,
@@ -172,28 +188,28 @@ export default function Memories({ isModalOpen, handleModal }) {
         images: JSON.stringify(imgUrls),
         date,
       };
-      console.log(data, "gggggggg");
 
-      const response = await supabase.from("memories").insert(data).select();
+      // 🚨 Supabase request
 
-      if (response.status !== 201) {
+      try {
+        const response = await supabase.from("memories").insert(data).select();
+        const baseURL = window.location.origin;
+        const resData = response.data[0];
+        const memoryId = resData.id;
+        memoryDetails.current = {
+          title,
+          link: `${baseURL}/memory/${memoryId}`,
+          date,
+          name,
+          email,
+          duration: getHumanReadableDuration(resData.created_at, resData.date),
+        };
+        triggerGoogleOAUTH();
         setIsLoading(false);
+        console.log(response, "hhhhhhh");
+      } catch (e) {
+        console.log(`Supabase Error:${e}`);
       }
-      console.log(response, "nnnnnnnnn");
-      const baseURL = window.location.origin;
-      const resData = response.data[0];
-      const memoryId = resData.id;
-      setMemoryDetails({
-        title,
-        link: `${baseURL}/memory/${memoryId}`,
-        date,
-        name,
-        email,
-        duration: getHumanReadableDuration(resData.created_at, resData.date),
-      });
-      triggerGoogleOAUTH();
-      setIsLoading(false);
-      console.log(response, "hhhhhhh");
     } catch (e) {
       console.log(`Error:${e}`);
       setIsLoading(false);
