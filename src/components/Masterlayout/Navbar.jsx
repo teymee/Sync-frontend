@@ -4,14 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 export default function Navbar() {
   const { pathname } = useLocation();
   const links = [
-    {
-      name: "Top tracks",
-      link: "/top-tracks",
-    },
-    {
-      name: "Top artists",
-      link: "/top-artists",
-    },
+    // {
+    //   name: "Top tracks",
+    //   link: "/top-tracks",
+    // },
+    // {
+    //   name: "Top artists",
+    //   link: "/top-artists",
+    // },
     // {
     //   name: "Top list",
     //   link: "/top-list",
